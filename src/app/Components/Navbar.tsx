@@ -7,18 +7,19 @@ import Link from 'next/link';
 export default function index() {
 
     const [show, setshow] = useState(false);
+    // 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4
     return (
-        <div className=" bg-black ">
-            <nav className="2xl:container 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
+        <div className=" bg-black  ">
+            <nav className="bg-black lg:px-20 lg:py-6  sm:py-6 sm:px-7 py-5 px-4 sticky ">
                 {/* For large and Medium-sized Screen */}
                 <div className="flex justify-between items-center ">
                     <div className=" flex space-x-3 items-center">
                        <Logo/>
                     </div>
                     <div className="hidden sm:flex flex-row space-x-4">
-                        <Link href="#">¿Qué hacemos?</Link>
-                        <Link href="#">¿Quiénes somos?</Link>
-                        <Link href="#">Contactanos</Link>
+                        <Link className="px-8 text-white" href="#">¿Qué hacemos?</Link>
+                        <Link className="px-8 text-white" href="#">¿Quiénes somos?</Link>
+                        <Link className="px-8 text-white" href="#">Contactanos</Link>
                     </div>
                     {/* Burger Icon */}
                     <div id="bgIcon" onClick={()=>setshow(!show)} className={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800  justify-center items-center sm:hidden cursor-pointer`}>
@@ -37,8 +38,9 @@ export default function index() {
                 <div id="MobileNavigation" className={`${show ? 'block' : 'hidden'} sm:hidden mt-4 mx-auto`}>
                  
                     <div className="flex flex-col gap-4 mt-4  mx-auto ">
-                        <button className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-indigo-700 bg-indigo-600 bg-opacity-0 hover:opacity-100 duration-100 border border-indigo-700 focus:outline-none focus:bg-gray-200 hover:bg-gray-200 duration-150 justify-center items-center">Sign Up</button>
-                        <button className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 duration-150 justify-center items-center">Sign In</button>
+                         <Link className='text-white' href="#">¿Qué hacemos?</Link>
+                        <Link className='text-white' href="#">¿Quiénes somos?</Link>
+                        <Link className='text-white' href="#">Contactanos</Link>
                     </div>
                 </div>
             </nav>

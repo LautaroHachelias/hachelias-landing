@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -11,11 +13,25 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --organgeColor : #F49920;
+    --grayColor : #3F3F3F;
+    --grayLight: rgba(223, 223, 223, 1);
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-orangeColor {
+  color: var(--organgeColor)
+}
+
+.bg-orangeColor {
+  background-color: var(--organgeColor);
+}
+
+.bg-grayLight {
+  background-color: var(--grayLight);
 }
