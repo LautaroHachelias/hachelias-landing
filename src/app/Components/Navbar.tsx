@@ -9,15 +9,15 @@ export default function index() {
     const [show, setshow] = useState(false);
     // 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4
     return (
-        <div className=" bg-black  ">
-            <nav className="bg-black lg:px-20 lg:py-6  sm:py-6 sm:px-7 py-5 px-4 sticky ">
+        <div className=" bg-black w-full sticky z-50  top-0  ">
+            <nav className="bg-black lg:px-20 lg:py-6  sm:py-6 sm:px-7 py-5 px-4 ">
                 {/* For large and Medium-sized Screen */}
                 <div className="flex justify-between items-center ">
                     <div className=" flex space-x-3 items-center">
                        <Logo/>
                     </div>
                     <div className="hidden sm:flex flex-row space-x-4">
-                        <Link className="px-8 text-white" href="#">¿Qué hacemos?</Link>
+                        <Link className="px-8 text-white" href="#contacto">¿Qué hacemos?</Link>
                         <Link className="px-8 text-white" href="#">¿Quiénes somos?</Link>
                         <Link className="px-8 text-white" href="#">Contactanos</Link>
                     </div>

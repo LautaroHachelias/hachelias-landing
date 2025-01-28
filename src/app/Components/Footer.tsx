@@ -2,35 +2,38 @@ import Instagram from "./Icons/Instagram";
 import Linkedin from "./Icons/Linkedin";
 import Logo from "./Icons/Logo";
 import Link from "next/link";
-
+import Wrapper from "./Wrapper/Wrapper";
 
 const Footer = () => {
   return (
-    
+    //lg:px-20 lg:py-20 sm:py-6 sm:px-7 py-5 px-20
     <footer>
-            <div className="bg-black row-start-3 flex  flex-wrap items-center justify-between  lg:px-20 lg:py-20 sm:py-6 sm:px-7 py-5 px-20">
-                <div>
-                    <Logo />
-                </div>
-
-                <div className="flex flex-col gap-4">
-                    <Link className="px-8" href="#">
-                    ¿Qué hacemos?
-                    </Link>
-                    <Link className="px-8" href="#">
-                    ¿Quiénes somos?
-                    </Link>
-                    <Link className="px-8" href="#">
-                    Contactanos
-                    </Link>
-                </div>
-
-                <div className="flex gap-10">
-                    <Instagram/>
-                    <Linkedin/>
-                </div>
-
+      <div className="bg-black lg:py-20 sm:py-6  py-5   ">
+        <Wrapper>
+          <div className=" flex  flex-wrap items-center justify-between ">
+            <div>
+              <Logo />
             </div>
+
+            <div className="flex flex-col gap-4">
+              <Link className="px-8 text-white" href="#">
+                ¿Qué hacemos?
+              </Link>
+              <Link className="px-8 text-white" href="#">
+                ¿Quiénes somos?
+              </Link>
+              <Link className="px-8 text-white" href="#">
+                Contactanos
+              </Link>
+            </div>
+
+            <div className="flex gap-10">
+              <Instagram />
+              <Linkedin />
+            </div>
+          </div>
+        </Wrapper>
+      </div>
     </footer>
   );
 };
