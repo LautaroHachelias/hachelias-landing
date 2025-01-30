@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Form = () => {
   return (
-    <section id="contacto" className="h-screen w-full bg-white mt-40">
+    <section id="contacto" className="min-h-screen w-full bg-white mt-40">
       <Wrapper>
         <Title h3Text="Contanos" spanText="tu proyecto" color="black" />
         <form className="w-full" action="">

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const About2 = () => {
   return (
-    <section className="pt-40 pb-20  h-screen w-full bg-black">
+    <section className="pt-40 pb-20  min-h-screen w-full bg-black">
       <Wrapper>
         <div className="flex ">
           <div className="flex flex-col w-3/5">
