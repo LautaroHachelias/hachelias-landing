@@ -21,7 +21,7 @@ const About = () => {
   return (
     <section className="min-h-screen w-full bg-white">
       <Wrapper>
-        <div className="mt-40">
+        <div className="mt-40 mb-10">
           <Title
             color="black"
             h3Text="Esto es lo"
@@ -38,7 +38,7 @@ const About = () => {
             </span>
           </div>
 
-          <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5   mt-10">
+          <section className="grid gap-4 lg:gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5   mt-10">
             {aboutActivities.map((activity: Activity) => (
              <Card key={activity.id} title={activity.title} img={activity.img} hrefCta={activity.hrefCta}  />
           ))}

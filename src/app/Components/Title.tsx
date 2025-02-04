@@ -12,7 +12,7 @@ const Title: React.FC<TitleProps> = ({ color = "black", h3Text, spanText, inline
   return (
     <h3
       className={classNames(
-        "text-7xl font-normal",
+        "text-6xl lg:text-7xl font-normal",
         {
           "text-black": color === "black",
           "text-white": color === "white",

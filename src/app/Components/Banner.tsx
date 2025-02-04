@@ -21,11 +21,11 @@ const Banner = () => {
       {/* Contenido principal */}
       <Wrapper>
         <div className="z-2">
-          <h1 className="text-white text-9xl font-bold">H A V</h1>
-          <h2 className="text-white text-5xl font-light">
+          <h1 className="text-white text-8xl sm:text-9xl font-bold">H A V</h1>
+          <h2 className="text-white text-3xl font-thin whitespace-nowrap ">
             Impulsando <span className="font-bold">tus historias </span>
           </h2>
-          <div className="flex gap-4 mt-10">
+          <div className="flex flex-col md:flex gap-4 mt-10">
             <Button text="¿Qué hacemos?" />
             <Button
               text="CONTACTANOS"

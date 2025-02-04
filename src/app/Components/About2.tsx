@@ -6,10 +6,10 @@ import Image from "next/image";
 
 const About2 = () => {
   return (
-    <section className="pt-40 pb-20  min-h-screen w-full bg-black">
+    <section className="pt-20 lg:pt-40 pb-20  min-h-screen w-full bg-black">
       <Wrapper>
-        <div className="flex ">
-          <div className="flex flex-col w-3/5">
+        <div className="flex flex-col lg:flex ">
+          <div className="flex flex-col w-full  lg:w-3/5">
             <Title
               color="white"
               h3Text="¿Quiénes"
@@ -17,7 +17,7 @@ const About2 = () => {
               inline={true}
             />
 
-            <div className="w-3/5 mt-4">
+            <div className=" w-full  lg:w-3/5 mt-4">
               <p className="text-white text-xl ">
                 Torem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
@@ -31,19 +31,25 @@ const About2 = () => {
               </p>
             </div>
 
-            <div className="w-3/5">
+            <div className=" w-full  lg:w-3/5">
               <h4 className="text-white text-5xl mt-20">
                 ¿Te interesa nuestra{" "}
                 <span className="text-white font-bold block">propuesta?</span>
               </h4>
-              <div className="mt-8">
+              <div className="mt-8 mb-8 lg:mb-0 flex justify-center">
                 <Button text="CONTACTANOS" />
               </div>
             </div>
           </div>
-          <div className="flex w-2/5 gap-4 items-center justify-center ">
-            <Image  src="/about1.png"  width={330} height={505} alt="el pepe"/>
-            <Image  className="mt-40" src="/about2.png"  width={330} height={505} alt="el pepe"/>
+          <div className="flex flex-col lg:flex  w-full  lg:w-2/5  gap-4 items-center justify-center ">
+            <Image src="/about1.png" width={330} height={505} alt="el pepe" />
+            <Image
+              className="lg:mt-40"
+              src="/about2.png"
+              width={330}
+              height={505}
+              alt="el pepe"
+            />
           </div>
         </div>
       </Wrapper>

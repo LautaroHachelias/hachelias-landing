@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     //lg:px-20 lg:py-20 sm:py-6 sm:px-7 py-5 px-20
     <footer>
-      <div className="bg-black  lg:px-20 lg:py-20 sm:py-6  py-5   ">
+      <div className="bg-black  px-4 lg:px-20 lg:py-20 sm:py-6  py-5   sm:px-7   ">
           <div className=" flex  flex-wrap items-center justify-between ">
             <div>
               <Logo />

@@ -11,14 +11,14 @@ const Form = () => {
         <form className="w-full" action="">
           <div className="w-full mt-20 flex gap-10">
             <input
-              className="w-1/2 border-b border-black placeholder:text-[#ADADAD] placeholder:font-outfit placeholder:text-[18px] placeholder:font-normal placeholder:tracking-[6.12px] placeholder:uppercase placeholder:leading-normal"
+              className="w-full sm:w-1/2 border-b border-black placeholder:text-[#ADADAD] placeholder:font-outfit placeholder:text-[18px] placeholder:font-normal placeholder:tracking-[6.12px] placeholder:uppercase placeholder:leading-normal"
               type="text"
               name="Nombre"
               id=""
               placeholder="TU NOMBRE"
             />
             <input
-              className="w-1/2 border-b border-black placeholder:text-[#ADADAD] placeholder:font-outfit placeholder:text-[18px] placeholder:font-normal placeholder:tracking-[6.12px] placeholder:uppercase placeholder:leading-normal"
+              className="w-full sm:w-1/2 border-b border-black placeholder:text-[#ADADAD] placeholder:font-outfit placeholder:text-[18px] placeholder:font-normal placeholder:tracking-[6.12px] placeholder:uppercase placeholder:leading-normal"
               type="email"
               name="Nombre"
               id=""
@@ -34,7 +34,7 @@ const Form = () => {
               placeholder="Contanos sobre tu proyecto"
             ></textarea>
           </div>
-          <div className="flex w-full justify-end mt-20">
+          <div className="flex w-full justify-center lg:justify-end mt-20">
             <Button text="ENVIAR MENSAJE" />
           </div>
         </form>
