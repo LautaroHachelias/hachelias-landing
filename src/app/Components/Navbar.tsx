@@ -14,16 +14,18 @@ export default function index() {
         {/* For large and Medium-sized Screen */}
         <div className="flex justify-between items-center z-50">
           <div className="flex space-x-3 items-center">
-            <Logo />
+            <Link href="#home">
+              <Logo />
+            </Link>
           </div>
           <div className="hidden sm:flex flex-row space-x-4">
-            <Link className="px-8 text-white" href="#contacto">
+            <Link className="px-8 text-white" href="#que-hacemos">
               ¿Qué hacemos?
             </Link>
-            <Link className="px-8 text-white" href="#">
+            <Link className="px-8 text-white" href="#quienes-somos">
               ¿Quiénes somos?
             </Link>
-            <Link className="px-8 text-white" href="#">
+            <Link className="px-8 text-white" href="#contacto">
               Contactanos
             </Link>
           </div>
@@ -100,20 +102,21 @@ export default function index() {
         >
           <div className="flex flex-col gap-[56px] text-center">
             <Link
+            scroll={false}
               className="text-white font-outfit text-[33px] font-medium leading-[41.58px]"
-              href="#"
+              href="#que-hacemos"
             >
               ¿Qué hacemos?
             </Link>
             <Link
               className="text-white font-outfit text-[33px] font-medium leading-[41.58px]"
-              href="#"
+              href="#quienes-somos"
             >
               ¿Quiénes somos?
             </Link>
             <Link
               className="text-white font-outfit text-[33px] font-medium leading-[41.58px]"
-              href="#"
+              href="#contacto"
             >
               Contactanos
             </Link>

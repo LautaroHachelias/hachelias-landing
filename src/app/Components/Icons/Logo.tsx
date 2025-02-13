@@ -1,10 +1,14 @@
 import React from "react";
+type SizeProps = {
+  width?: string | number;
+  height?: string | number;
+};
 
-const Logo = () => {
+const Logo: React.FC<SizeProps> = ({width = 45, height = 63 }) => {
   return (
     <svg
-      width="45"
-      height="63"
+      width={width}
+      height={height}
       viewBox="0 0 45 63"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import Arrow from "./Arrow";
 import Link from "next/link";
-import classNames from "classnames";
+
 
 interface CardProps {
   key?: string;
@@ -13,7 +12,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ img, title, hrefCta }) => {
   return (
-    <article className="flex flex-col  border border-[#B4B4B4] bg-white  w-full">
+    <article className="flex flex-col z-index5 border  border-[#B4B4B4] bg-white  w-full card">
       <Image
         className="w-auto h-auto"
         height={300}

@@ -12,7 +12,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ text, bgColor = 'bg-orangeColor', circleColor = 'black' }) => {
   return (
     <Link href="#" className={classNames(
-        'flex w-fit cursor-pointer py-4 px-8 items-center gap-4 text-white font-outfit text-[18px] font-normal leading-normal tracking-[6.12px] rounded-full flex-shrink-0',
+        'flex w-fit cursor-pointer py-4 px-8 items-center gap-4 text-white font-outfit text-[14px] lg:text-[18px] font-normal leading-normal tracking-[2px]  lg:tracking-[6.12px] rounded-full flex-shrink-0 z-index5',
         bgColor
       )}>
       {text}

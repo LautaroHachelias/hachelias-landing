@@ -1,10 +1,15 @@
 import React from "react";
 
-const CircleTwo = () => {
+type SizeProps = {
+  width?: string | number;
+  height?: string | number;
+};
+
+const CircleTwo: React.FC<SizeProps> = ({ width = 293, height = 293 }) => {
   return (
     <svg
-      width="293"
-      height="293"
+      width={width}
+      height={height}
       viewBox="0 0 293 293"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
