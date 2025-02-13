@@ -2,9 +2,15 @@
 import { useState } from "react";
 import Logo from "./Icons/Logo";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function index() {
   const [show, setshow] = useState(false);
+
+  const menuVariants = {
+    hidden: { opacity: 0, y: -20, transition: { duration: 1, ease: "easeInOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeInOut" } },
+  };
 
   return (
     <div className="bg-black w-full sticky z-50 top-0">
@@ -94,15 +100,20 @@ export default function index() {
         </div>
 
         {/* Mobile and small-screen devices (toggle Menu) */}
-        <div
+        <motion.div
           id="MobileNavigation"
           className={`${
             show ? "flex" : "hidden"
-          } sm:hidden flex justify-center items-center w-full h-[80%] `}
+          } sm:hidden flex justify-center items-center w-full h-[80%]`}
+          initial="hidden"
+          animate={show ? "visible" : "hidden"}
+          exit="hidden"
+          variants={menuVariants}
+          layout
         >
           <div className="flex flex-col gap-[56px] text-center">
             <Link
-            scroll={false}
+              scroll={false}
               className="text-white font-outfit text-[33px] font-medium leading-[41.58px]"
               href="#que-hacemos"
             >
@@ -121,7 +132,7 @@ export default function index() {
               Contactanos
             </Link>
           </div>
-        </div>
+        </motion.div>
       </nav>
     </div>
   );

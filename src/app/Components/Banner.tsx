@@ -8,36 +8,35 @@ import CircleThree from "./Icons/CirclesBanner/CircleThree";
 import CircleFour from "./Icons/CirclesBanner/CircleFour";
 import CircleFive from "./Icons/CirclesBanner/CircleFive";
 import DownArrow from "./Icons/DownArrow";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Banner = () => {
+  const { scrollY } = useScroll(); // Captura el scroll vertical
+
+  // Mapea el scroll a una rotación
+  const rotation = useTransform(scrollY, [0, 1000], [0, 360]);
+  const rotation2 = useTransform(scrollY, [0, 1000], [0, -360]);
+
   return (
     <section
       id="home"
       className="w-full z-index5 h-screen flex  pt-20 lg:pt-40 sm:pt-20  relative overflow-hidden bg-black "
     >
       {/* Círculos arriba a la derecha */}
-      <div className="absolute  top-0 right-0 flex gap-4  p-4">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-        >
-          <CircleOne />
-        </motion.div>
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 16, ease: "linear" }}
-        >
-          <CircleTwo />
-        </motion.div>
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-        >
-          <CircleThree />
-        </motion.div>
+      <div className="absolute  top-0 right-[-150px] flex gap-4  p-4">
+       <motion.div style={{ rotate: rotation }}>
+        <CircleOne />
+      </motion.div>
+      <motion.div style={{ rotate: rotation }}>
+        <CircleTwo />
+      </motion.div>
+      <motion.div style={{ rotate: rotation }}>
+        <CircleThree />
+      </motion.div>
+      <motion.div style={{ rotate: rotation }}>
 
-        <CircleFour />
+      <CircleThree />
+      </motion.div>
       </div>
       {/* Contenido principal */}
       <Wrapper>
@@ -86,26 +85,16 @@ const Banner = () => {
         </div>
       </Wrapper>
       <div className="absolute bottom-40 left-0 flex  gap-4 mt-40 p-4">
-        
         <CircleFive />
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-        >
-          <CircleThree />
-        </motion.div>
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-        >
-          <CircleTwo />
-        </motion.div>
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-        >
-          <CircleOne />
-        </motion.div>
+      <motion.div style={{ rotate: rotation2 }}>
+        <CircleThree />
+      </motion.div>
+      <motion.div style={{ rotate: rotation }}>
+        <CircleTwo />
+      </motion.div>
+      <motion.div style={{ rotate: rotation }}>
+        <CircleOne />
+      </motion.div>
       </div>
 
       {/* <div className="hidden absolute sm:right-20 md:right-20 lg:right-20 bottom-60 xl:right-40 w-16 h-16 rounded-full border-red-400 ">

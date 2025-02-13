@@ -4,7 +4,7 @@ import Title from "./Title";
 const Clients = () => {
   return (
     <section className="bg-gray-100 text-white pt-8 pb-4 w-full overflow-hidden h-96">
-      <div className="flex justify-center my-10">
+      <div className="flex justify-center my-10 px-4">
         <Title h3Text="Confían en" spanText=" nosotros" inline={true} />
       </div>
       <div className="w-full inline-flex flex-nowrap">
