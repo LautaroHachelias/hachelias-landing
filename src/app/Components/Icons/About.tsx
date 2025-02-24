@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import {useEffect} from "react";
 import Wrapper from "../Wrapper/Wrapper";
 import DownArrow2 from "./DownArrow2";
 import Title from "../Title";
 import { Card } from "./Card";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { aboutActivities } from "@/app/constants/constants";
 
 import CircleTwo from "./CirclesBanner/CircleTwo";
@@ -17,18 +17,34 @@ interface Activity {
 }
 
 const About = () => {
+   const { scrollY } = useScroll(); // Captura el scroll vertical
+  
+    // Mapea el scroll a una rotación
+    const rotation = useTransform(scrollY, [0, 1000], [0, 360]);
+    const rotation2 = useTransform(scrollY, [0, 1000], [0, -360]);
+  
+  
   return (
     <section
       id="que-hacemos"
       className="min-h-screen  relative w-full bg-white overflow-hidden  "
     >
-      <div className="absolute z-2 top-[-600px] right-[-400px] lg:top-[-300px] lg:right-[-300px]  h-3/4 ">
+      <motion.div 
+       className="absolute z-2 top-[-600px] right-[-400px] lg:top-[-300px] lg:right-[-300px] h-3/4"
+       style={{
+         rotate: rotation,  // Aplica la rotación dinámica
+       }}
+      >
         <CircleTwo width="100%" height="100%" />
-      </div>
+      </motion.div>
 
-      <div className="absolute z-2 bottom-[-600px] left-[-400px] lg:bottom-[-300px] lg:left-[-300px] h-3/4 ">
+      <motion.div className="absolute z-2 bottom-[-600px] left-[-400px] lg:bottom-[-300px] lg:left-[-300px] h-3/4 "
+       style={{
+        rotate: rotation,  // Aplica la rotación dinámica
+      }}
+      >
         <CircleTwo width="100%" height="100%" />
-      </div>
+      </motion.div>
 
       <Wrapper>
         <div className="mt-40  mb-10">

@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
 interface TitleProps {
   color?: "white" | "black"; // Color opcional: blanco o negro
@@ -10,7 +12,7 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ color = "black", h3Text, spanText, inline = false }) => {
   return (
-    <h3
+    <motion.h3
       className={classNames(
         "text-6xl lg:text-7xl font-normal",
         {
@@ -18,17 +20,24 @@ const Title: React.FC<TitleProps> = ({ color = "black", h3Text, spanText, inline
           "text-white": color === "white",
         }
       )}
+      initial={{ opacity: 0, y: 20 }}  // Empieza invisible y un poco desplazado
+      animate={{ opacity: 1, y: 0 }}   // Aparece suavemente desde abajo
+      transition={{ duration: 1 }}      // Duración de la animación
     >
       {h3Text}
-      <span
+      <motion.span
         className={classNames("font-bold", {
           block: !inline, // Si `inline` es falso, aplicamos `block`
           inline: inline, // Si `inline` es verdadero, aplicamos `inline`
         })}
+        initial={{ opacity: 0, x: -20 }}  // Empieza invisible y desplazado a la izquierda
+        animate={{ opacity: 1, x: 0 }}   // Aparece suavemente desde la izquierda
+        transition={{ delay: 0.3, duration: 1 }} // Retraso y duración de la animación
+        whileHover={{ scale: 1.1, color: "#F00000" }}  // Escala y cambio de color al hacer hover
       >
-         {spanText}
-      </span>
-    </h3>
+        {spanText}
+      </motion.span>
+    </motion.h3>
   );
 };
 

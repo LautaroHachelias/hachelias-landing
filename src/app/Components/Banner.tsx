@@ -12,10 +12,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Banner = () => {
   const { scrollY } = useScroll(); // Captura el scroll vertical
-
-  // Mapea el scroll a una rotación
   const rotation = useTransform(scrollY, [0, 1000], [0, 360]);
   const rotation2 = useTransform(scrollY, [0, 1000], [0, -360]);
+  
 
   return (
     <section
@@ -67,7 +66,7 @@ const Banner = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             >
-              <Button text="¿Qué hacemos?" />
+              <Button text="¿Qué hacemos?" href="#que-hacemos" />
             </motion.div>
 
             <motion.div
@@ -79,6 +78,7 @@ const Banner = () => {
                 text="CONTACTANOS"
                 bgColor="transparent"
                 circleColor="grayColor"
+                href="#contacto"
               />
             </motion.div>
           </div>

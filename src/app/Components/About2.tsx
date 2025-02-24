@@ -70,7 +70,7 @@ const About2 = () => {
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 className="mt-8 mb-8 lg:mb-0 flex justify-center lg:justify-start"
               >
-                <Button text="CONTACTANOS" />
+                <Button text="CONTACTANOS" href="#contacto" />
               </motion.div>
             </motion.div>
           </div>
