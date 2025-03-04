@@ -18,13 +18,15 @@ export const aboutActivities = [
 
 
 export const eventos = [
-  { imageSrc: "/delpo.png", text: "Despedida de Del Potro", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Concierto en Vivo", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Festival de Música", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Exposición de Arte", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Torneo de Ajedrez", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Carrera de Maratón", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Feria Gastronómica", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Competencia de Surf", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
-  { imageSrc: "/delpo.png", text: "Show de Magia", videoSrc: "https://player.vimeo.com/video/1056443130?h=450d711978&autoplay=1&muted=1&loop=1&background=1&controls=0&title=0&byline=0&portrait=0" },
+  { id: "1", imageSrc: "/delpo.png", text: "DESPEDIDA DEL POTRO - DJOKOVIC", videoSrc: "https://www.youtube.com/embed/ibIIoOO8sXU" },
+  { id: "2", imageSrc: "/delpo.png", text: "KICK & FEST", videoSrc: "https://www.youtube.com/embed/kuCe3ISkCqQ" },
+  { id: "3", imageSrc: "/delpo.png", text: "GRUPO CLARÍN", videoSrc: "https://www.youtube.com/embed/vxqSYPL7Tsw" },
+  { id: "4", imageSrc: "/delpo.png", text: "ELENA FOUR SEASON", videoSrc: "https://www.youtube.com/embed/IxO_9DwaNfs" },
+  { id: "5", imageSrc: "/delpo.png", text: "MARKOVA", videoSrc: "https://www.youtube.com/embed/B5qfHBO_4Ic" },
+  { id: "6", imageSrc: "/delpo.png", text: "PATAGONIA FLOORING", videoSrc: "https://www.youtube.com/embed/7S_4k20ATN8" },
+  { id: "7", imageSrc: "/delpo.png", text: "SUMMER RUGBY", videoSrc: "https://www.youtube.com/embed/sT9E_F7NVX0" },
+  { id: "8", imageSrc: "/delpo.png", text: "SUMMER POLO", videoSrc: "https://www.youtube.com/embed/uE1f-7A_ft8" },
+  { id: "9", imageSrc: "/delpo.png", text: "NEO PISTEA PUEBLO LIMITE", videoSrc: "https://www.youtube.com/embed/vx7Mq4DRnis" }
 ];
+
+
