@@ -2,22 +2,29 @@ export const aboutActivities = [
   { id: "1", title: "EVENTOS", img: "/activity_1.png", hrefCta: "/eventos" },
   {
     id: "2",
-    title: "CAMPAÑAS PUBLICITARIAS",
+    title: "PUBLICIDAD",
     img: "/activity_2.png",
-    hrefCta: "#",
+    hrefCta: "/publicidad",
   },
-  { id: "3", title: "CCTV", img: "/activity_3.png", hrefCta: "#" },
+  // { id: "3", title: "CCTV", img: "/activity_3.png", hrefCta: "#" },
   {
     id: "4",
-    title: "STREAMING Y PODCAST",
+    title: "STREAMING Y TV",
     img: "/activity_4.png",
-    hrefCta: "#",
+    hrefCta: "/streaming",
   },
-  { id: "5", title: "Motion Graphics y VFX", img: "/activity_5.png", hrefCta: "#" },
+  { id: "5", title: "MOTION GRAPHICS Y VFX", img: "/activity_5.png", hrefCta: "/motionGraphics" },
 ];
 
 
-export const eventos = [
+export interface Evento {
+  id: string;
+  imageSrc: string;
+  text: string;
+  videoSrc: string;
+}
+
+export const eventos:Evento[] = [
   { id: "1", imageSrc: "/eventos/delpo.png", text: "DESPEDIDA DEL POTRO - DJOKOVIC", videoSrc: "https://www.youtube.com/embed/ibIIoOO8sXU" },
   { id: "2", imageSrc: "/eventos/quick.png", text: "KICK & FEST", videoSrc: "https://www.youtube.com/embed/kuCe3ISkCqQ" },
   { id: "3", imageSrc: "/eventos/clarin.jpg", text: "GRUPO CLARÍN", videoSrc: "https://www.youtube.com/embed/vxqSYPL7Tsw" },
@@ -29,4 +36,22 @@ export const eventos = [
   { id: "9", imageSrc: "/eventos/corona.jpg", text: "NEO PISTEA PUEBLO LIMITE", videoSrc: "https://www.youtube.com/embed/vx7Mq4DRnis" }
 ];
 
+
+export const publicidad: Evento[] = [
+  { id: "1", imageSrc: "/publicidad/CHANGO.png", text: "CHANGO", videoSrc: "https://www.youtube.com/embed/k2xcps3Olhc" },
+  { id: "2", imageSrc: "/publicidad/patagonia.jpg", text: "PATAGONIA FLOORING", videoSrc: "https://www.youtube.com/embed/zKxolO8HbLU" },
+  { id: "3", imageSrc: "/publicidad/POLARIS.jpg", text: "POLARIS", videoSrc: "https://www.youtube.com/embed/JJh6XQu_lIo" },
+  { id: "4", imageSrc: "/publicidad/TREGAR.jpg", text: "TREGAR", videoSrc: "https://www.youtube.com/embed/JDi-pIeBNrM" }
+];
+
+
+export const streaming:Evento[] = [
+  
+
+
+]
+
+export const motionGraphics:Evento[] = [
+  { id: "1", imageSrc: "/motion/dexalegrin.jpg", text: "DEXALEGRIN", videoSrc: "https://www.youtube.com/embed/Tiir5XbsGYI" }
+]
 

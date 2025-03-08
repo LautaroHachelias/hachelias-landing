@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import DownArrow2 from "../Components/Icons/DownArrow2";
 import GridCards from "../Components/GridCards";
 import Link from "next/link";
-import { eventos } from "../constants/constants";
+import { streaming } from "../constants/constants";
 
-const Eventos = () => {
+const Streaming = () => {
   return (
     <section className="min-h-screen w-full py-20 ">
       <Wrapper>
@@ -26,7 +26,7 @@ const Eventos = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              EVENTOS
+              streaming
             </motion.span>
           </motion.h3>
           <Title h3Text="Esto es lo" spanText="que hacemos" />
@@ -39,7 +39,7 @@ const Eventos = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-orangeColor text-[19px] font-semibold leading-normal tracking-[6.46px] uppercase"
           >
-            EVENTOS
+            streaming
           </motion.h4>
           <motion.span
             initial={{ opacity: 0, y: 50 }}
@@ -52,9 +52,9 @@ const Eventos = () => {
         </div>
       </Wrapper>
 
-      <GridCards eventos={eventos} />
+      <GridCards eventos={streaming}/>
     </section>
   );
 };
 
-export default Eventos;
+export default Streaming;

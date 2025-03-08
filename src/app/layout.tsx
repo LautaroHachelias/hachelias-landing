@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       "videos profesionales",
       "filmación",
       "postproducción",
-    ]
+    ],
   };
 
 export default function RootLayout({
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" content="notranslate">
       <body
         className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden  `}
       >

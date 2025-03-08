@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const Presentation: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Presentation = () => {
   const [showAnimation, setShowAnimation] = useState(true);
   const [colorChanged, setColorChanged] = useState(false);
 
@@ -24,7 +24,7 @@ const Presentation: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
   return (
     <>
-      {showAnimation ? (
+     
         <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
           {/* Animación de letras iniciales H, A, V */}
           <motion.div
@@ -112,9 +112,7 @@ const Presentation: React.FC<{ children: React.ReactNode }> = ({ children }) => 
             </motion.span>
           </motion.div>
         </div>
-      ) : (
-        children
-      )}
+      
     </>
   );
 };

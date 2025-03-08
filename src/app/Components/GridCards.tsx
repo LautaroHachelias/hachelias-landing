@@ -1,10 +1,14 @@
 import React from "react";
-import { eventos } from "../constants/constants";
+import { Evento } from "../constants/constants";
 import HoverArticle from "./HoverArticle";
 import Wrapper from "./Wrapper/Wrapper";
 
-const GridCards = () => {
-  console.log(eventos.map(evento => console.log(evento)))
+interface GridCardsProps {
+  eventos: Evento[];
+}
+
+const GridCards: React.FC<GridCardsProps> = ({eventos}) => {
+ 
   return (
     <section className="flex items-start w-full mb-10">
       <Wrapper>

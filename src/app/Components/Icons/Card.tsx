@@ -12,7 +12,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ img, title, hrefCta }) => {
   return (
-    <Link href={hrefCta} className=" hover:z-50">
+    <Link href={hrefCta} className=" hover:z-40">
     <article className="flex flex-col z-index5 border  border-[#B4B4B4]  bg-white h-full  w-full card cursor-pointer">
       <Image
         className="w-auto h-auto"
