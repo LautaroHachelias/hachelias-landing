@@ -20,7 +20,7 @@ export default function index() {
         {/* For large and Medium-sized Screen */}
         <div className="flex justify-between items-center z-50">
           <div className="flex space-x-3 items-center">
-            <Link href="#home">
+            <Link href="/#home">
               <Logo />
             </Link>
           </div>

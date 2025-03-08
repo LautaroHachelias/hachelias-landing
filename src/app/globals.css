@@ -73,10 +73,15 @@ body {
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: scale(1);
+  
 }
 
 .card:hover {
   transform: scale(1.1); /* Aumenta el tamaño */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Agrega una sombra para el efecto */
-  z-index: 10
+  z-index: 15 ;
+}
+
+html {
+  scroll-behavior: smooth;
 }

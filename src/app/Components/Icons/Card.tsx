@@ -12,7 +12,8 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ img, title, hrefCta }) => {
   return (
-    <article className="flex flex-col z-index5 border  border-[#B4B4B4] bg-white  w-full card">
+    <Link href={hrefCta} className=" hover:z-50">
+    <article className="flex flex-col z-index5 border  border-[#B4B4B4]  bg-white h-full  w-full card cursor-pointer">
       <Image
         className="w-auto h-auto"
         height={300}
@@ -29,7 +30,6 @@ export const Card: React.FC<CardProps> = ({ img, title, hrefCta }) => {
         </div>
 
         <div className="w-1/4">
-          <Link className=" flex  items-center justify-center  bg-[#FFEDD9] h-6 w-6 rounded-full" href={hrefCta}>
               <svg
                 width="12"
                 height="12"
@@ -50,9 +50,9 @@ export const Card: React.FC<CardProps> = ({ img, title, hrefCta }) => {
                   strokeWidth="0.25"
                 />
               </svg>
-          </Link>
         </div>
       </div>
     </article>
+    </Link>
   );
 };

@@ -10,14 +10,18 @@ interface HoverArticleProps {
   videoSrc: string; // Video que se pasará como prop
 }
 
-export default function HoverArticle({ imageSrc, text, videoSrc }: HoverArticleProps) {
+export default function HoverArticle({
+  imageSrc,
+  text,
+  videoSrc,
+}: HoverArticleProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
   return (
-    <article className="relative flex-grow cursor-pointer">
+    <article className="relative flex-grow cursor-pointer  ">
       <motion.div
         initial={{ opacity: 0 }} // Comienza con el texto invisible
         animate={{ opacity: 1 }} // Aparece con una transición suave
@@ -25,29 +29,32 @@ export default function HoverArticle({ imageSrc, text, videoSrc }: HoverArticleP
         className="relative w-full h-full"
         onClick={handleOpenModal}
       >
-        <Image
-          src={imageSrc}
-          alt="Imagen"
-          width={300}
-          height={210}
-          objectFit="cover"
-          className="rounded-md w-full h-full"
-         // Ahora el modal se abrirá al hacer clic en la imagen
-        />
+        <div className="relative w-[100%] h-[210px]">
+          <Image
+            src={imageSrc}
+            alt="Imagen"
+            fill // Hace que la imagen ocupe todo el contenedor
+            className="object-cover rounded-md"
+          />
+        </div>
         <motion.div
           className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center"
           initial={{ opacity: 0 }} // Empieza sin opacidad
           whileHover={{ opacity: 1 }} // Al hacer hover, aumenta la opacidad
           transition={{ opacity: { duration: 0.3 } }} // Transición suave para la opacidad
           onClick={handleOpenModal}
-       >
-          <span    className="text-white uppercase text-2xl font-extrabold leading-normal">
+        >
+          <span className="text-white uppercase text-2xl font-extrabold leading-normal">
             {text}
           </span>
         </motion.div>
       </motion.div>
       {/* Modal de video */}
-      <ModalVideo isOpen={isModalOpen} videoSrc={videoSrc} onClose={handleCloseModal} />
+      <ModalVideo
+        isOpen={isModalOpen}
+        videoSrc={videoSrc}
+        onClose={handleCloseModal}
+      />
     </article>
   );
 }

@@ -33,7 +33,6 @@ const Title: React.FC<TitleProps> = ({ color = "black", h3Text, spanText, inline
         initial={{ opacity: 0, x: -20 }}  // Empieza invisible y desplazado a la izquierda
         animate={{ opacity: 1, x: 0 }}   // Aparece suavemente desde la izquierda
         transition={{ delay: 0.3, duration: 1 }} // Retraso y duración de la animación
-        whileHover={{ scale: 1.1, color: "#F00000" }}  // Escala y cambio de color al hacer hover
       >
         {spanText}
       </motion.span>

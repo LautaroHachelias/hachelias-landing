@@ -5,6 +5,7 @@ import Title from "../Components/Title";
 import { motion } from "framer-motion";
 import DownArrow2 from "../Components/Icons/DownArrow2";
 import GridCards from "../Components/GridCards";
+import Link from "next/link";
 
 const Eventos = () => {
   return (
@@ -17,7 +18,7 @@ const Eventos = () => {
             animate={{ opacity: 1, x: 0 }} // Aparece suavemente desde la izquierda
             transition={{ duration: 1 }} // Duración de la animación
           >
-            HOME / SERVICIOS /{" "}
+           <Link href={"/"}>HOME</Link>  / <Link href="/#que-hacemos">SERVICIOS</Link> /{" "}
             <motion.span
               className="text-[#F49920]"
               initial={{ opacity: 0 }}

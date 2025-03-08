@@ -76,7 +76,7 @@ const About2 = () => {
           </div>
 
           <div className="flex flex-col xl:flex-row w-full lg:w-2/5 gap-4 items-center justify-center z-index5">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
@@ -91,7 +91,9 @@ const About2 = () => {
               className="xl:mt-40"
             >
               <Image src="/about2.png" width={330} height={505} alt="el pepe" />
-            </motion.div>
+            </motion.div> */}
+
+            <Image width={500} height={200} alt="Quienes somos" src={"/quienes_somos.png"}/>
           </div>
         </div>
       </Wrapper>

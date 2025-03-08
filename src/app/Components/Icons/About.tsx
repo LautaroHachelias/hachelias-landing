@@ -1,5 +1,4 @@
 "use client";
-import {useEffect} from "react";
 import Wrapper from "../Wrapper/Wrapper";
 import DownArrow2 from "./DownArrow2";
 import Title from "../Title";
@@ -21,7 +20,6 @@ const About = () => {
   
     // Mapea el scroll a una rotación
     const rotation = useTransform(scrollY, [0, 1000], [0, 360]);
-    const rotation2 = useTransform(scrollY, [0, 1000], [0, -360]);
   
   
   return (
@@ -82,7 +80,7 @@ const About = () => {
             </div>
           </div>
 
-          <section className="grid gap-4 lg:gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 z-4   mt-10">
+          <section className="grid gap-4 lg:gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 z-4 mt-10">
             {aboutActivities.map((activity: Activity) => (
               <Card
                 key={activity.id}
