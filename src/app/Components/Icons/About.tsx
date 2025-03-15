@@ -31,7 +31,7 @@ const About = () => {
           setInView(false); // Si sale del viewport, desactiva las animaciones
         }
       },
-      { threshold: 0.5 } // El umbral de visibilidad es del 50%
+      { threshold: 0.1 } // El umbral de visibilidad es del 10%
     );
 
     const section = sectionRef.current;
@@ -69,13 +69,27 @@ const About = () => {
       <Wrapper>
         <div className="mt-40 mb-10">
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.6 }}
+            {/* <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <Title color="black" h3Text="Esto es lo" spanText=" que hacemos" inline={false} />
+            </motion.div> */}
+                <div className="flex flex-col w-full z-index5 lg:w-3/5">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <Title
+                color="black"
+                h3Text="Esto es lo"
+                spanText=" que hacemos"
+                inline={true}
+              />
             </motion.div>
+            </div>
 
             <div className="flex items-baseline z-index5">
               <motion.h4
