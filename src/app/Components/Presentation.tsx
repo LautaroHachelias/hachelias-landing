@@ -20,7 +20,7 @@ const Presentation = () => {
   return (
     <>
      
-        <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
+        <div className="hidden fixed inset-0 md:flex items-center justify-center bg-black z-50">
           {/* Animación de letras iniciales H, A, V */}
           <motion.div
             className="text-white text-6xl font-bold flex  items-center"
